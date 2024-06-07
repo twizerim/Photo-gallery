@@ -25,3 +25,8 @@ write in terminal : *node name of the folder/name of the file*
 * node Challenges/arrayMap.js 
 * node Challenges/stringTransform.js 
 
+
+# Solution of first challenge
+
+# solution of second challeng 
+
