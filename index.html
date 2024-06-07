@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="photo-container">
+            <div class="photo">
+                <img src="./assets/image4.png" alt="" class="image">
+                <div class="smol">
+                    <h1>FENNEC FOX</h1>
+                    <p>India</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="./assets/image4(1).png" alt="" class="image">
+                <div class="smol">
+                    <h1>HUMPBACK WHALE</h1>
+                    <p>South Africa</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="./assets/image4(2).png" alt="" class="image">
+                <div class="text">
+                    <h1>COMMON BROWN BABOON</h1>
+                    <p>South Africa</p>
+                </div>
+            </div>
+            <div class="photo">
+                <img src="./assets/image4(3).png" alt="" class="image">
+                <div class="smol">
+                    <h1>SPOTTED DEER</h1>
+                    <p>Amazon</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function downloadImage(imageElement) {
+            const imageUrl = imageElement.src;
+            const link = document.createElement('a');
+            
+            link.href = imageUrl;
+            link.download = 'downloaded-image.jpg';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        document.querySelectorAll('.image').forEach(image => {
+            image.addEventListener('click', () => downloadImage(image));
+            image.addEventListener('mouseover', () => {
+                const textContainer = image.nextElementSibling;
+                if (textContainer) {
+                    textContainer.style.display = 'block';
+                }
+            });
+            image.addEventListener('mouseout', () => {
+                const textContainer = image.nextElementSibling;
+                if (textContainer) {
+                    textContainer.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
