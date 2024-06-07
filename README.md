@@ -12,6 +12,16 @@ The target of this project is to design photo gallery in html ,css and javascrip
 
 ## how to run this project
 
+
 * run html on the browser
-* node Challenges/arrayMap.js in terminal
-* node Challenges/stringTransform.js in termial
+If you want to download a picture click on image after be hovered
+
+## runing challenges
+
+write in terminal : *node name of the folder/name of the file*
+
+# example:
+
+* node Challenges/arrayMap.js 
+* node Challenges/stringTransform.js 
+
